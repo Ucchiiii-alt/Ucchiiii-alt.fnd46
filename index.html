@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フォトギャラリー</title>
+  <link rel="stylesheet" href="gallery.css">
+
+</head>
+<body>
+  
+  <h1 class="title"> フォトギャラリー</h1>
+     <p class="honbun">これはフォトギャラリーです<br>(写真が好きなので自分でギャラリーを作成したかった)<br>このページの作成を通じて以下の確認をしています</p>
+     <li class="honbun">
+      ・HTMLでのページ作成方法、テキスト、画像の配置<br>
+      ・JavaScriptを用いて、イベントの処理、入力情報の受け渡し、HTMLの書き換え<br>
+      ・CSSの記載方法の確認<br>
+     </li>
+  
+
+  <div class="bl_imgSwitcher" id="js_imgSwitcher">
+   <div class="bl_imgSwitcher_main"> <img src="images/img_main.jpg" width="300px" height="400px">  </div> 
+   <p class="honbun">サムネイルをクリック、または、画像Noを入力後Enter押してください</p>
+   <input class="input_imgSwitcher" id="thumbNo" type="number">
+   
+    <div class="bl_imgSwitcher_thumb">
+    <button class="bl_imgSwitcher_btn" type="button" data-no="1"><img src="images/img1.JPG" width="400px"></button>
+    <button class="bl_imgSwitcher_btn" type="button" data-no="2"><img src="images/img2.JPG" width="400px"></button>
+    <button class="bl_imgSwitcher_btn" type="button" data-no="3"><img src="images/img3.JPG" width="400px"></button>
+    <button class="bl_imgSwitcher_btn" type="button" data-no="4"><img src="images/img4.JPG" width="400px"></button>
+    <button class="bl_imgSwitcher_btn" type="button" data-no="5"><img src="images/img5.JPG" width="400px"></button>
+    <button class="bl_imgSwitcher_btn" type="button" data-no="6"><img src="images/img6.JPG" width="400px"></button>
+    <button class="bl_imgSwitcher_btn" type="button" data-no="7"><img src="images/img7.JPG" width="400px"></button>
+    <button class="bl_imgSwitcher_btn" type="button" data-no="8"><img src="images/img8.JPG" width="400px"></button>
+    <button class="bl_imgSwitcher_btn" type="button" data-no="9"><img src="images/img9.JPG" width="400px"></button>
+    <button class="bl_imgSwitcher_btn" type="button" data-no="10"><img src="images/img10.JPG" width="400px"></button>
+    <button class="bl_imgSwitcher_btn" type="button" data-no="11"><img src="images/img11.JPG" width="400px"></button>
+
+   </div>
+  </div>
+
+<script src="gallery.js"></script>
+</body>
+</html>
