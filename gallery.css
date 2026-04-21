@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+.title{
+  /*font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";*/
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+
+  padding: 0.5em;/*文字周りの余白*/
+  color: #010101;/*文字色*/
+  background: #eaf3ff;/*背景色*/
+  border-bottom: solid 3px #516ab6;/*下線*/
+  }
+
+  .honbun{
+  /*font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";*/
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: transparent;/*背景透明に*/
+  }
+
+.bl_imgSwitcher_main{
+  inline-size: min(100%, 900px); /*画面が小さいときは100%表示*/
+  margin-inline: auto;  /*左右の余白を自動にしてセンタリング*/
+  margin-block: 3rem;  /*フォントサイズ基準の余白*/
+}
+
+/* メイン画像 */
+.bl_imgSwitcher_main img {
+  aspect-ratio: 4/3;  /*アスペクト比固定*/
+  inline-size: 100%;  /*親要素の幅いっぱいに広げる*/
+  object-fit: cover;  /*縦横比固定したまあ枠いっぱいに表示、はみだしはトリミング*/
+  border-radius: 20px; /*枠角を丸に*/
+  transition: opacity .4s cubic-bezier(.25, 1, .5, 1);
+}
+
+/* サムネイルのエリア */
+.bl_imgSwitcher_thumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3.0rem; /*サムネイル画像の縦と横の余白*/
+  margin-block-start: 2rem; /*メイン画像との上下余白*/
+  overflow-x: visible;
+  margin: 5rem;
+}
+
+/*サムネイル画像用*/
+.bl_imgSwitcher_btn img { 
+  inline-size: 100%;
+  block-size: 95%; /*枠に対するサムネイル画像の縦%*/
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+/* サムネイルの各ボタン */
+.bl_imgSwitcher_btn {
+  position: relative; /*番号表示に必要*/
+  flex-shrink: 0; /*1にすると親と一緒に縮むためゼロ*/
+  inline-size: 10rem; /*サムネイル枠の横幅 10rem=フォントサイズx10個分*/
+  aspect-ratio: 3/2;
+  cursor:pointer;
+  padding: 0.3rem; /*枠とサムネイル画像の縦余白*/
+  overflow: hidden; /*画像がはみ出したら切り取る*/
+  border-radius: 20px;
+}
+
+/*番号表示のスタイル*/
+.bl_imgSwitcher_btn::after {
+  content: attr(data-no);
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+}
+
+
+.input_imgSwitcher {
+  display: block;
+  margin-inline: auto;
+  width: 10%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 25px;
+  background: #f7f7f7;
+  color: #333;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
